@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: neos-hdl-users-2-discord
-  spec:
-    replicas: 1
-    template:
-      metadata:
-        labels:
-          app: neos-hdl-users-2-discord
-      spec:
-        containers:
-        - image: ghcr.io/totegamma/neoshdlusers2discord:master
-          name: neos-hdl-users-2-discord
-          envFrom:
-          - secretRef:
-            name: nhu2d-secrets
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: neos-hdl-users-2-discord
+    spec:
+      containers:
+      - image: ghcr.io/totegamma/neoshdlusers2discord:master
+        name: neos-hdl-users-2-discord
+        envFrom:
+        - secretRef:
+          name: nhu2d-secrets
 
