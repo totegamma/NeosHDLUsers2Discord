@@ -36,6 +36,8 @@ async def update():
     channel = client.get_channel(CHANNEL_ID)
     message = await channel.fetch_message(MESSAGE_ID)
     await message.edit(content=newmsg)
+    with open('/tmp/healthy', 'a') as fp:
+        pass
 
 @client.event
 async def on_ready():
