@@ -4,10 +4,13 @@ metadata:
   name: neos-hdl-users-2-discord
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: neos-hdl-users-2-discord
   template:
     metadata:
       labels:
-        app: neos-hdl-users-2-discord
+        name: neos-hdl-users-2-discord
     spec:
       containers:
       - name: neos-hdl-users-2-discord
