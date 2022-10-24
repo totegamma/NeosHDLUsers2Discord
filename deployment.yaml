@@ -10,9 +10,9 @@ spec:
         app: neos-hdl-users-2-discord
     spec:
       containers:
-      - image: ghcr.io/totegamma/neoshdlusers2discord:master
-        name: neos-hdl-users-2-discord
+      - name: neos-hdl-users-2-discord
+        image: ghcr.io/totegamma/neoshdlusers2discord:master
         envFrom:
-        - secretRef:
-          name: nhu2d-secrets
+          - secretRef:
+              name: nhu2d-secrets
 
